@@ -49,6 +49,7 @@ services:
       - REDIS_PORT=$REDIS_DOCKER_PORT
     volumes:
       - ./:/api-test
+      - /api-test/node_modules
     stdin_open: true
     tty: true
 volumes: 

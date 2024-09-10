@@ -1,12 +1,9 @@
-import express from 'express';
+import "dotenv/config";
+import "reflect-metadata";
+import Main from "./components/process/main";
 
-const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+const App = new Main();
+App.init();
+App.start();
+export { App };

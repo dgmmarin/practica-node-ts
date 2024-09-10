@@ -11,9 +11,9 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE || "test",
   synchronize: process.env.DB_SYNC == "true" ? true : false,
   logging: process.env.DB_LOGGING == "true" ? true : false,
-  // entities: [path.join(__dirname, "database/entities", "*.ts")],
-  entities: [path.join(__dirname, "controllers", "*/entity/*.entity.ts")],
+  entities: [path.join(__dirname, "database/entities", "*.ts")],
+  // entities: [path.join(__dirname, "controllers", "*/entity/*.entity.ts")],
   migrations: [path.join(__dirname, "database/migrations", "*.ts")],
-  subscribers: [path.join(__dirname, "database/subscribers", "*.ts")],
+  // subscribers: [path.join(__dirname, "database/subscribers", "*.ts")],
   migrationsTableName: "migrations",
 });
