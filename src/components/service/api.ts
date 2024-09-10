@@ -59,7 +59,8 @@ export default class Api implements Service {
   registerRoutes(): void {
     this.app.use("/test",root);
     this.app.use("/auth", auth);
-    this.app.use("/users", authenticateJWT, getRequestedUser, users);
+    this.app.use("/users", users);
+    // this.app.use("/users", authenticateJWT, getRequestedUser, users);
     // this.app.use("/roles", authenticateJWT, getRequestedUser, roles);
     // this.app.use(
     //   "/permissions",

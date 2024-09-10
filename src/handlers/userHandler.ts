@@ -22,7 +22,7 @@ export class UserHandler {
     this.getOrder = this.getOrder.bind(this);
   }
 
-  @Roles(["admin"])
+//   @Roles(["admin"])
   async createUser(req: Request, res: Response) {
     try {
       const user = await this.controller.createUser(
