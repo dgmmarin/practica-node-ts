@@ -6,7 +6,6 @@ export default class SanitizedUser {
   firstName: string;
   lastName: string;
   email: string;
-
   @Exclude()
   password: string;
   createdAt: Date;

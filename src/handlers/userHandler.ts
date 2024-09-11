@@ -35,7 +35,7 @@ export class UserHandler {
     }
   }
 
-  @Roles(["admin", "user"])
+//   @Roles(["admin", "user"])
   async getUser(req: Request, res: Response) {
     try {
       const user = await this.controller.getUser(Number(req.params.userId));
@@ -97,7 +97,7 @@ export class UserHandler {
     }
   }
 
-  @Roles(["admin"])
+//   @Roles(["admin"])
   async listUsers(req: Request, res: Response) {
     try {
       const users = await this.controller.listUsers();
